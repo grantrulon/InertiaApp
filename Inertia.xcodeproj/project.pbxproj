@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B65B00129E4D84C0040E9DC /* InertiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B65B00029E4D84C0040E9DC /* InertiaApp.swift */; };
+		0B65B00329E4D84C0040E9DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B65B00229E4D84C0040E9DC /* ContentView.swift */; };
+		0B65B00529E4D8540040E9DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B65B00429E4D8540040E9DC /* Assets.xcassets */; };
+		0B65B00829E4D8540040E9DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B65B00729E4D8540040E9DC /* Preview Assets.xcassets */; };
+		0B65B00A29E4D8540040E9DC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B65B00929E4D8540040E9DC /* Persistence.swift */; };
+		0B65B00D29E4D8540040E9DC /* Inertia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B65B00B29E4D8540040E9DC /* Inertia.xcdatamodeld */; };
+		0B65B01629E60E7C0040E9DC /* EditHabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B65B01529E60E7C0040E9DC /* EditHabitsView.swift */; };
+		0B65B01929E65DDE0040E9DC /* HabitBlueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B65B01829E65DDE0040E9DC /* HabitBlueprint.swift */; };
+		0B65B01B29E706210040E9DC /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B65B01A29E706210040E9DC /* Habit.swift */; };
+		0B65B01E29E70BB80040E9DC /* HexGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 0B65B01D29E70BB80040E9DC /* HexGrid */; };
+		0B65B02029E738060040E9DC /* HabitRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B65B01F29E738060040E9DC /* HabitRecordView.swift */; };
+		0B65B02229E7394A0040E9DC /* HabitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B65B02129E7394A0040E9DC /* HabitCard.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0B65AFFD29E4D84C0040E9DC /* Inertia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inertia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B65B00029E4D84C0040E9DC /* InertiaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InertiaApp.swift; sourceTree = "<group>"; };
+		0B65B00229E4D84C0040E9DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0B65B00429E4D8540040E9DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0B65B00729E4D8540040E9DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0B65B00929E4D8540040E9DC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		0B65B00C29E4D8540040E9DC /* Inertia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Inertia.xcdatamodel; sourceTree = "<group>"; };
+		0B65B00E29E4D8540040E9DC /* Inertia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Inertia.entitlements; sourceTree = "<group>"; };
+		0B65B01529E60E7C0040E9DC /* EditHabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHabitsView.swift; sourceTree = "<group>"; };
+		0B65B01829E65DDE0040E9DC /* HabitBlueprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitBlueprint.swift; sourceTree = "<group>"; };
+		0B65B01A29E706210040E9DC /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		0B65B01F29E738060040E9DC /* HabitRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitRecordView.swift; sourceTree = "<group>"; };
+		0B65B02129E7394A0040E9DC /* HabitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCard.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0B65AFFA29E4D84C0040E9DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B65B01E29E70BB80040E9DC /* HexGrid in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B65AFF429E4D84B0040E9DC = {
+			isa = PBXGroup;
+			children = (
+				0B65AFFF29E4D84C0040E9DC /* Inertia */,
+				0B65AFFE29E4D84C0040E9DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0B65AFFE29E4D84C0040E9DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B65AFFD29E4D84C0040E9DC /* Inertia.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0B65AFFF29E4D84C0040E9DC /* Inertia */ = {
+			isa = PBXGroup;
+			children = (
+				0B65B01729E65D9C0040E9DC /* Data Models */,
+				0B65B01429E60E3D0040E9DC /* Views */,
+				0B65B00029E4D84C0040E9DC /* InertiaApp.swift */,
+				0B65B00429E4D8540040E9DC /* Assets.xcassets */,
+				0B65B00929E4D8540040E9DC /* Persistence.swift */,
+				0B65B00E29E4D8540040E9DC /* Inertia.entitlements */,
+				0B65B00B29E4D8540040E9DC /* Inertia.xcdatamodeld */,
+				0B65B00629E4D8540040E9DC /* Preview Content */,
+			);
+			path = Inertia;
+			sourceTree = "<group>";
+		};
+		0B65B00629E4D8540040E9DC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0B65B00729E4D8540040E9DC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0B65B01429E60E3D0040E9DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0B65B00229E4D84C0040E9DC /* ContentView.swift */,
+				0B65B01529E60E7C0040E9DC /* EditHabitsView.swift */,
+				0B65B01F29E738060040E9DC /* HabitRecordView.swift */,
+				0B65B02129E7394A0040E9DC /* HabitCard.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0B65B01729E65D9C0040E9DC /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				0B65B01829E65DDE0040E9DC /* HabitBlueprint.swift */,
+				0B65B01A29E706210040E9DC /* Habit.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0B65AFFC29E4D84C0040E9DC /* Inertia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B65B01129E4D8540040E9DC /* Build configuration list for PBXNativeTarget "Inertia" */;
+			buildPhases = (
+				0B65AFF929E4D84C0040E9DC /* Sources */,
+				0B65AFFA29E4D84C0040E9DC /* Frameworks */,
+				0B65AFFB29E4D84C0040E9DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Inertia;
+			packageProductDependencies = (
+				0B65B01D29E70BB80040E9DC /* HexGrid */,
+			);
+			productName = Inertia;
+			productReference = 0B65AFFD29E4D84C0040E9DC /* Inertia.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0B65AFF529E4D84B0040E9DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					0B65AFFC29E4D84C0040E9DC = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 0B65AFF829E4D84B0040E9DC /* Build configuration list for PBXProject "Inertia" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0B65AFF429E4D84B0040E9DC;
+			packageReferences = (
+				0B65B01C29E70BB80040E9DC /* XCRemoteSwiftPackageReference "HexGrid" */,
+			);
+			productRefGroup = 0B65AFFE29E4D84C0040E9DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0B65AFFC29E4D84C0040E9DC /* Inertia */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0B65AFFB29E4D84C0040E9DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B65B00829E4D8540040E9DC /* Preview Assets.xcassets in Resources */,
+				0B65B00529E4D8540040E9DC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B65AFF929E4D84C0040E9DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B65B01929E65DDE0040E9DC /* HabitBlueprint.swift in Sources */,
+				0B65B01629E60E7C0040E9DC /* EditHabitsView.swift in Sources */,
+				0B65B02029E738060040E9DC /* HabitRecordView.swift in Sources */,
+				0B65B00D29E4D8540040E9DC /* Inertia.xcdatamodeld in Sources */,
+				0B65B01B29E706210040E9DC /* Habit.swift in Sources */,
+				0B65B00A29E4D8540040E9DC /* Persistence.swift in Sources */,
+				0B65B00329E4D84C0040E9DC /* ContentView.swift in Sources */,
+				0B65B02229E7394A0040E9DC /* HabitCard.swift in Sources */,
+				0B65B00129E4D84C0040E9DC /* InertiaApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0B65B00F29E4D8540040E9DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0B65B01029E4D8540040E9DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		0B65B01229E4D8540040E9DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Inertia/Inertia.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Inertia/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GR.Inertia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0B65B01329E4D8540040E9DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Inertia/Inertia.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Inertia/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GR.Inertia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B65AFF829E4D84B0040E9DC /* Build configuration list for PBXProject "Inertia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B65B00F29E4D8540040E9DC /* Debug */,
+				0B65B01029E4D8540040E9DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B65B01129E4D8540040E9DC /* Build configuration list for PBXNativeTarget "Inertia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B65B01229E4D8540040E9DC /* Debug */,
+				0B65B01329E4D8540040E9DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0B65B01C29E70BB80040E9DC /* XCRemoteSwiftPackageReference "HexGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ksemianov/HexGrid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0B65B01D29E70BB80040E9DC /* HexGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B65B01C29E70BB80040E9DC /* XCRemoteSwiftPackageReference "HexGrid" */;
+			productName = HexGrid;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		0B65B00B29E4D8540040E9DC /* Inertia.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0B65B00C29E4D8540040E9DC /* Inertia.xcdatamodel */,
+			);
+			currentVersion = 0B65B00C29E4D8540040E9DC /* Inertia.xcdatamodel */;
+			path = Inertia.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 0B65AFF529E4D84B0040E9DC /* Project object */;
+}
