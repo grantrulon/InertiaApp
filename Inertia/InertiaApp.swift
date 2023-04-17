@@ -6,15 +6,29 @@
 //
 
 import SwiftUI
+import FirebaseCore
+import FirebaseAuth
+
+class AppDelegate: NSObject, NSApplicationDelegate {
+//    func applicationDid(_ application: NSApplication, didFinishLaunchingWithOptions launchOptions: [NSApplication. : Any]? = nil) -> Bool {
+//        FirebaseApp.configure()
+//        return true
+//      }
+    
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        FirebaseApp.configure()
+    }
+
+}
 
 @main
 struct InertiaApp: App {
-    let persistenceController = PersistenceController.shared
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

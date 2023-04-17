@@ -7,14 +7,25 @@
 
 import SwiftUI
 import HexGrid
+import FirebaseFirestore
 
 struct EditHabitsView: View {
     
     
-    var habitBlueprints: [HabitBlueprint]
+    @Binding var habitBlueprints: [HabitBlueprint]
     
     @State var scale = 1.0
     @State var previousScale = 1.0
+//
+//    @Binding var nextX: Int
+//    @Binding var nextY: Int
+    
+    var newData: [String:Any] = [
+        "name": "new",
+        "description": "new description",
+        "uid": "2sNYIIlMajX0CVWs6XKM60W07Kb2",
+        "userEmail": "test@test.com"
+    ]
     
     
     // https://www.youtube.com/watch?v=Gq39U4mJEY4
@@ -30,34 +41,59 @@ struct EditHabitsView: View {
             }
     }
     
-//    var clickDrag: some Gesture {
-//        DragGesture()
-//            .onChanged { newLocation in
-//                location = newLocation.location
-//            }
-//    }
-    
     var body: some View {
-//        ScrollView([.horizontal, .vertical]) {
-            HexGrid(habitBlueprints) { blueprint in
-                ZStack {
-                    blueprint.color
-                    Text(blueprint.name)
-//                        .foregroundColor(.white)
-//                        .onTapGesture {
-//                            print("Clicking on \(blueprint.name)")
-//                        }
-//                        .onHover {_ in
-//                            print("Hovering on \(blueprint.name)")
-//                        }
+        VStack {
+            HStack {
+                Spacer()
+                Button(action: addBlueprintItem) {
+                    Text("+")
+                        .frame(width: 25, height: 25)
                 }
+                .background(Color.blue)
+                .cornerRadius(38.5)
                 
+                .padding()
             }
-//            .scaleEffect(scale)
-//            .gesture(magnification)
-//        }
+            .buttonStyle(.borderedProminent)
+            ScrollView([.horizontal, .vertical]) {
+                HexGrid(habitBlueprints) { blueprint in
+                    ZStack {
+                        blueprint.color
+                        HStack {
+                            Text(blueprint.name)
+        //                        .onTapGesture {
+        //                            print("Clicking on \(blueprint.name)")
+        //                        }
+                            DeleteButton(blueprints: $habitBlueprints, name: blueprint.name, key: blueprint.key)
+                        }
+                        
+                    }
+                    
+                }
+                .frame(minWidth: 200, minHeight: 200)
+                .scaleEffect(scale)
+                .gesture(magnification)
+            }
+            
+        }
     }
     
+    func addBlueprintItem() {
+        self.habitBlueprints.append(HabitBlueprint(name: "new", description: "new", color: .blue, importance: 10, mode: .fullCompletion, offsetCoordinate: .init(row: 1, col: 0), key: "New Document"))
+        
+        // add to the database
+        let db = Firestore.firestore()
+        
+        let document = db.collection("Blueprints").document("New Document")
+        
+        document.setData(newData) { error in
+            if let error {
+                print("Error creating new blueprint \(error)")
+            } else {
+                print("Successfully added a blueprint")
+            }
+        }
+    }
     
 }
 

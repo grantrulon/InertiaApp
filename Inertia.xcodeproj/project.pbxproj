@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B005B5329ECDE0A006B86F4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0B005B5229ECDE0A006B86F4 /* FirebaseAuth */; };
+		0B005B5529ECE65D006B86F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B005B5429ECE65C006B86F4 /* GoogleService-Info.plist */; };
+		0B005B5729ECECE0006B86F4 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B005B5629ECECE0006B86F4 /* AccountView.swift */; };
 		0B65B00129E4D84C0040E9DC /* InertiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B65B00029E4D84C0040E9DC /* InertiaApp.swift */; };
 		0B65B00329E4D84C0040E9DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B65B00229E4D84C0040E9DC /* ContentView.swift */; };
 		0B65B00529E4D8540040E9DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B65B00429E4D8540040E9DC /* Assets.xcassets */; };
@@ -19,9 +22,19 @@
 		0B65B01E29E70BB80040E9DC /* HexGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 0B65B01D29E70BB80040E9DC /* HexGrid */; };
 		0B65B02029E738060040E9DC /* HabitRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B65B01F29E738060040E9DC /* HabitRecordView.swift */; };
 		0B65B02229E7394A0040E9DC /* HabitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B65B02129E7394A0040E9DC /* HabitCard.swift */; };
+		0B7F5B9B29ED972A006C34D7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F5B9A29ED972A006C34D7 /* User.swift */; };
+		0B7F5B9D29ED975D006C34D7 /* InertiaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F5B9C29ED975D006C34D7 /* InertiaViewModel.swift */; };
+		0B7F5BA029ED9976006C34D7 /* Days.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F5B9F29ED9976006C34D7 /* Days.swift */; };
+		0B7F5BA229ED9991006C34D7 /* HabitMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F5BA129ED9991006C34D7 /* HabitMode.swift */; };
+		0B7F5BA429ED99D1006C34D7 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F5BA329ED99D1006C34D7 /* Record.swift */; };
+		0B7F5BA629ED9BFE006C34D7 /* LoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F5BA529ED9BFE006C34D7 /* LoggedInView.swift */; };
+		0B7F5BA929EDA6C9006C34D7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0B7F5BA829EDA6C9006C34D7 /* FirebaseFirestore */; };
+		0B7F5BAB29EDD12A006C34D7 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F5BAA29EDD12A006C34D7 /* DeleteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B005B5429ECE65C006B86F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0B005B5629ECECE0006B86F4 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		0B65AFFD29E4D84C0040E9DC /* Inertia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inertia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B65B00029E4D84C0040E9DC /* InertiaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InertiaApp.swift; sourceTree = "<group>"; };
 		0B65B00229E4D84C0040E9DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +48,13 @@
 		0B65B01A29E706210040E9DC /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		0B65B01F29E738060040E9DC /* HabitRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitRecordView.swift; sourceTree = "<group>"; };
 		0B65B02129E7394A0040E9DC /* HabitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCard.swift; sourceTree = "<group>"; };
+		0B7F5B9A29ED972A006C34D7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0B7F5B9C29ED975D006C34D7 /* InertiaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InertiaViewModel.swift; sourceTree = "<group>"; };
+		0B7F5B9F29ED9976006C34D7 /* Days.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Days.swift; sourceTree = "<group>"; };
+		0B7F5BA129ED9991006C34D7 /* HabitMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitMode.swift; sourceTree = "<group>"; };
+		0B7F5BA329ED99D1006C34D7 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		0B7F5BA529ED9BFE006C34D7 /* LoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInView.swift; sourceTree = "<group>"; };
+		0B7F5BAA29EDD12A006C34D7 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +63,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B65B01E29E70BB80040E9DC /* HexGrid in Frameworks */,
+				0B005B5329ECDE0A006B86F4 /* FirebaseAuth in Frameworks */,
+				0B7F5BA929EDA6C9006C34D7 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +76,7 @@
 			children = (
 				0B65AFFF29E4D84C0040E9DC /* Inertia */,
 				0B65AFFE29E4D84C0040E9DC /* Products */,
+				0B7F5BA729EDA6C9006C34D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,10 +91,12 @@
 		0B65AFFF29E4D84C0040E9DC /* Inertia */ = {
 			isa = PBXGroup;
 			children = (
+				0B7F5B9E29ED97C4006C34D7 /* View Models */,
 				0B65B01729E65D9C0040E9DC /* Data Models */,
 				0B65B01429E60E3D0040E9DC /* Views */,
 				0B65B00029E4D84C0040E9DC /* InertiaApp.swift */,
 				0B65B00429E4D8540040E9DC /* Assets.xcassets */,
+				0B005B5429ECE65C006B86F4 /* GoogleService-Info.plist */,
 				0B65B00929E4D8540040E9DC /* Persistence.swift */,
 				0B65B00E29E4D8540040E9DC /* Inertia.entitlements */,
 				0B65B00B29E4D8540040E9DC /* Inertia.xcdatamodeld */,
@@ -95,6 +120,9 @@
 				0B65B01529E60E7C0040E9DC /* EditHabitsView.swift */,
 				0B65B01F29E738060040E9DC /* HabitRecordView.swift */,
 				0B65B02129E7394A0040E9DC /* HabitCard.swift */,
+				0B005B5629ECECE0006B86F4 /* AccountView.swift */,
+				0B7F5BA529ED9BFE006C34D7 /* LoggedInView.swift */,
+				0B7F5BAA29EDD12A006C34D7 /* DeleteButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -104,8 +132,27 @@
 			children = (
 				0B65B01829E65DDE0040E9DC /* HabitBlueprint.swift */,
 				0B65B01A29E706210040E9DC /* Habit.swift */,
+				0B7F5B9A29ED972A006C34D7 /* User.swift */,
+				0B7F5B9F29ED9976006C34D7 /* Days.swift */,
+				0B7F5BA129ED9991006C34D7 /* HabitMode.swift */,
+				0B7F5BA329ED99D1006C34D7 /* Record.swift */,
 			);
 			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		0B7F5B9E29ED97C4006C34D7 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				0B7F5B9C29ED975D006C34D7 /* InertiaViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		0B7F5BA729EDA6C9006C34D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +173,8 @@
 			name = Inertia;
 			packageProductDependencies = (
 				0B65B01D29E70BB80040E9DC /* HexGrid */,
+				0B005B5229ECDE0A006B86F4 /* FirebaseAuth */,
+				0B7F5BA829EDA6C9006C34D7 /* FirebaseFirestore */,
 			);
 			productName = Inertia;
 			productReference = 0B65AFFD29E4D84C0040E9DC /* Inertia.app */;
@@ -157,6 +206,7 @@
 			mainGroup = 0B65AFF429E4D84B0040E9DC;
 			packageReferences = (
 				0B65B01C29E70BB80040E9DC /* XCRemoteSwiftPackageReference "HexGrid" */,
+				0B005B5129ECDE0A006B86F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 0B65AFFE29E4D84C0040E9DC /* Products */;
 			projectDirPath = "";
@@ -174,6 +224,7 @@
 			files = (
 				0B65B00829E4D8540040E9DC /* Preview Assets.xcassets in Resources */,
 				0B65B00529E4D8540040E9DC /* Assets.xcassets in Resources */,
+				0B005B5529ECE65D006B86F4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,14 +236,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B65B01929E65DDE0040E9DC /* HabitBlueprint.swift in Sources */,
+				0B7F5BA629ED9BFE006C34D7 /* LoggedInView.swift in Sources */,
 				0B65B01629E60E7C0040E9DC /* EditHabitsView.swift in Sources */,
+				0B7F5BA429ED99D1006C34D7 /* Record.swift in Sources */,
 				0B65B02029E738060040E9DC /* HabitRecordView.swift in Sources */,
 				0B65B00D29E4D8540040E9DC /* Inertia.xcdatamodeld in Sources */,
+				0B005B5729ECECE0006B86F4 /* AccountView.swift in Sources */,
+				0B7F5BAB29EDD12A006C34D7 /* DeleteButton.swift in Sources */,
 				0B65B01B29E706210040E9DC /* Habit.swift in Sources */,
 				0B65B00A29E4D8540040E9DC /* Persistence.swift in Sources */,
+				0B7F5BA029ED9976006C34D7 /* Days.swift in Sources */,
 				0B65B00329E4D84C0040E9DC /* ContentView.swift in Sources */,
+				0B7F5BA229ED9991006C34D7 /* HabitMode.swift in Sources */,
 				0B65B02229E7394A0040E9DC /* HabitCard.swift in Sources */,
+				0B7F5B9D29ED975D006C34D7 /* InertiaViewModel.swift in Sources */,
 				0B65B00129E4D84C0040E9DC /* InertiaApp.swift in Sources */,
+				0B7F5B9B29ED972A006C34D7 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,11 +376,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Inertia/Inertia.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Inertia/Preview Content\"";
+				DEVELOPMENT_TEAM = 7R6BTB7M82;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -332,6 +395,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GR.Inertia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -342,11 +406,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Inertia/Inertia.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Inertia/Preview Content\"";
+				DEVELOPMENT_TEAM = 7R6BTB7M82;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -357,6 +425,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GR.Inertia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -386,6 +455,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0B005B5129ECDE0A006B86F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		0B65B01C29E70BB80040E9DC /* XCRemoteSwiftPackageReference "HexGrid" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ksemianov/HexGrid";
@@ -397,10 +474,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0B005B5229ECDE0A006B86F4 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B005B5129ECDE0A006B86F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
 		0B65B01D29E70BB80040E9DC /* HexGrid */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0B65B01C29E70BB80040E9DC /* XCRemoteSwiftPackageReference "HexGrid" */;
 			productName = HexGrid;
+		};
+		0B7F5BA829EDA6C9006C34D7 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B005B5129ECDE0A006B86F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -10,23 +10,12 @@ import SwiftUI
 import HexGrid
 
 
-enum Days {
-    case monday
-    case tuesday
-    case wednesday
-    case thursday
-    case friday
-    case saturday
-}
 
-enum HabitMode {
-    case fullCompletion
-    case partialCompletion
-}
 
 class HabitBlueprint: Identifiable, OffsetCoordinateProviding {
     var id: Int { offsetCoordinate.hashValue }
     var offsetCoordinate: OffsetCoordinate
+    var key: String
     
     var name: String
     var description: String
@@ -38,13 +27,14 @@ class HabitBlueprint: Identifiable, OffsetCoordinateProviding {
     var mode: HabitMode
     
     
-    init(name: String, description: String, color: Color, importance: Int, mode: HabitMode, offsetCoordinate: OffsetCoordinate) {
+    init(name: String, description: String, color: Color, importance: Int, mode: HabitMode, offsetCoordinate: OffsetCoordinate, key: String) {
         self.name = name
         self.description = description
         self.color = color
         self.importance = importance
         self.mode = mode
         self.offsetCoordinate = offsetCoordinate
+        self.key = key
     }
 }
 

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>189209377285-kd02snc59pdqef6p547po72ql2l57buh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.189209377285-kd02snc59pdqef6p547po72ql2l57buh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDC2Zb4NuD1JLEojbV65ZdAZXGoU6iGRA4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>189209377285</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.GR.Inertia</string>
+	<key>PROJECT_ID</key>
+	<string>inertiaapp-7cfff</string>
+	<key>STORAGE_BUCKET</key>
+	<string>inertiaapp-7cfff.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:189209377285:ios:6d594c771349ca5a7dfa6c</string>
+</dict>
+</plist>
