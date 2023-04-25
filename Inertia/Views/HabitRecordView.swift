@@ -9,13 +9,17 @@ import SwiftUI
 
 struct HabitRecordView: View {
     
-    // ObservedObject??
-    var habits: [Habit]
+    @Binding var todayHabits: [Habit]
     
     var body: some View {
         List {
-            ForEach(habits) { habit in
-                HabitCard(habit: habit, partialCompletionProgress: 0)
+            ForEach(0..<todayHabits.count, id: \.self) { i in
+                VStack {
+                    HabitCard(habit: $todayHabits[i], partialCompletionProgress: 0)
+                }
+            }
+            Button("Hello") {
+                todayHabits.append(Habit(name: "test", description: "test", date: .now, importance: 1, mode: .fullCompletion, color: .red))
             }
         }
         .frame(width: 500.0)

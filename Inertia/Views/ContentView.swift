@@ -10,34 +10,20 @@ import SwiftUI
 
 enum SidebarMenuSelections: String, CaseIterable, Identifiable {
     var id: String { rawValue }
-    case edit
-    case track
-    case account
+    case MyHabits
+    case TrackTheDay
     case stats
 }
 
 struct ContentView: View {
     @StateObject var inertiaViewModel = InertiaViewModel()
-//    @State var isLoggedIn = false
     
     // https://www.youtube.com/watch?v=8buuKon6ZdQ
     @State var visibility: NavigationSplitViewVisibility = .doubleColumn
-    @State var selectedMenuItem: SidebarMenuSelections = .edit
+    @State var selectedMenuItem: SidebarMenuSelections = .MyHabits
     
-//    var blueprints: [HabitBlueprint] = [
-//        HabitBlueprint(name: "Work Out", description: "Lift", color: .blue, importance: 9, mode: .fullCompletion, offsetCoordinate: .init(row: 0, col: 1), ),
-//        HabitBlueprint(name: "Drink Water", description: "3 Liters", color: .red, importance: 5, mode: .partialCompletion, offsetCoordinate: .init(row: 1, col: 0))
-//    ]
-    //
-    //    var simpleDrag: some Gesture {
-    //        DragGesture()
-    //            .onEnded { value in
-    //
-    //            } .onChanged { value in
-    //                self.isMoving = true
-    //                self.circlePosition1 = value.location
-    //            }
-    //    }
+    @State var showingProfilePopover = false
+    
     
     var body: some View {
         HStack {
@@ -47,29 +33,70 @@ struct ContentView: View {
                 }
             } detail: {
                 switch selectedMenuItem {
-                case .edit:
-                    EditHabitsView(habitBlueprints: $inertiaViewModel.blueprints)
-                    //                    Text("Edit")
-                case .track:
-                    HabitRecordView(habits: [Habit(name: "habit1", description: "Desc", date: .now, importance: 10, mode: .fullCompletion, color: .red), Habit(name: "Habit2", description: "Desc", date: .now, importance: 4, mode: .partialCompletion, color: .blue)])
-                    //                    ZStack {
-                    //                        Color(.blue)
-                    //                        ScrollView {
-                    //                            Text("Scroll")
-                    //                        }
-                    //                    }
-                    //                    Canvas { context, size in
-                    //                        context.
-                    //                    }
-                    //                    .frame(width: 200, height: 200)
-                case .account:
-                    if inertiaViewModel.isLoggedIn {
-                        LoggedInView(user: $inertiaViewModel.user, isLoggedIn: $inertiaViewModel.isLoggedIn)
-                    } else {
-                        AccountView(isLoggedIn: $inertiaViewModel.isLoggedIn, user: $inertiaViewModel.user, blueprints: $inertiaViewModel.blueprints)
+                case .MyHabits:
+                    ZStack {
+                        if true/*inertiaViewModel.isLoggedIn*/ {
+                            EditHabitsView(habitBlueprints: $inertiaViewModel.blueprints)
+                        } else {
+                            EditHabitsView(habitBlueprints: $inertiaViewModel.blueprints)
+                                .blur(radius: 20)
+                            Text("Login To Begin!")
+                                .font(
+                                    .largeTitle
+                                    .weight(.bold)
+                                )
+                                .foregroundColor(.blue)
+//                                .onTapGesture {
+//                                    selectedMenuItem = .account
+//                                }
+                        }
+                    }
+                case .TrackTheDay:
+                    ZStack {
+                        if inertiaViewModel.isLoggedIn {
+                            VStack {
+                                HabitRecordView(todayHabits: $inertiaViewModel.todayHabits)
+                                ForEach(inertiaViewModel.todayHabits) { habit in
+                                    Text("\(habit.name) : \(habit.completionPoints)")
+                                }
+                            }
+                            
+                            
+                        } else {
+                            HabitRecordView(todayHabits: $inertiaViewModel.todayHabits)
+                                .blur(radius: 20)
+                            Text("Login To Begin!")
+                                .font(
+                                    .largeTitle
+                                    .weight(.bold)
+                                )
+                                .foregroundColor(.blue)
+                        }
                     }
                 case .stats:
                     Text("Stats View")
+                }
+            }
+            .toolbar {
+                ToolbarItem {
+                    Button(action: {
+                        showingProfilePopover = true
+                        }, label: {
+                            Image(systemName: "person.crop.circle").imageScale(.large)
+                        }
+                    )
+                    .popover(isPresented: $showingProfilePopover) {
+                        if inertiaViewModel.isLoggedIn {
+                            LoggedInView(user: $inertiaViewModel.user, isLoggedIn: $inertiaViewModel.isLoggedIn)
+                                .frame(width: 200, height: 100)
+                                .padding()
+                        } else {
+                            AccountView(isLoggedIn: $inertiaViewModel.isLoggedIn, user: $inertiaViewModel.user, blueprints: $inertiaViewModel.blueprints)
+                                .frame(width: 400, height: 400)
+                                .padding()
+                        }
+                    }
+                    
                 }
             }
         }

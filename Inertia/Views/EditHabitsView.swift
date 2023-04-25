@@ -8,17 +8,14 @@
 import SwiftUI
 import HexGrid
 import FirebaseFirestore
-
 struct EditHabitsView: View {
-    
     
     @Binding var habitBlueprints: [HabitBlueprint]
     
     @State var scale = 1.0
     @State var previousScale = 1.0
-//
-//    @Binding var nextX: Int
-//    @Binding var nextY: Int
+    
+    @State var showingPopover = false
     
     var newData: [String:Any] = [
         "name": "new",
@@ -27,6 +24,16 @@ struct EditHabitsView: View {
         "userEmail": "test@test.com"
     ]
     
+    let blueprintPositions: [OffsetCoordinate] = [
+        .init(row: 0, col: 0),
+        .init(row: 1, col: 0),
+        .init(row: 0, col: 1),
+        .init(row: 1, col: 1),
+        .init(row: 0, col: 2)
+    ]
+    
+    @State var width: CGFloat = 200
+    @State var height: CGFloat = 200
     
     // https://www.youtube.com/watch?v=Gq39U4mJEY4
     var magnification: some Gesture {
@@ -41,41 +48,95 @@ struct EditHabitsView: View {
             }
     }
     
+    var editGrid = [GridItem(.adaptive(minimum: 140))]
+    
+    let colors = [Color.blue, .green, .red, .pink, .orange, .teal, .purple, .gray, .yellow]
+    
     var body: some View {
-        VStack {
-            HStack {
-                Spacer()
-                Button(action: addBlueprintItem) {
-                    Text("+")
-                        .frame(width: 25, height: 25)
-                }
-                .background(Color.blue)
-                .cornerRadius(38.5)
+        
+        ScrollView {
+            LazyVGrid(columns: editGrid) {
+//                ForEach(habitBlueprints) { blueprint in
+//                    ZStack {
+//                        Color(.red)
+//                            .frame(width: CGFloat(Int.random(in: 50...100)), height: CGFloat(Int.random(in: 50...100)))
+//                        Text(blueprint.name)
+//                    }
+//                }
+//                Circle()
+//                    .fill(.black)
+//                    .frame(width: 100)
+//
+//                ForEach(colors.indices, id: \.self) { idx in
+//                    RoundedRectangle(cornerRadius: 10)
+//                        .fill(colors[idx])
+//                        .frame(width: CGFloat(Int.random(in: 50...150)), height: CGFloat(Int.random(in: 50...150)))
+//                        .overlay(Text("\(idx)"))
+//                }
                 
-                .padding()
-            }
-            .buttonStyle(.borderedProminent)
-            ScrollView([.horizontal, .vertical]) {
-                HexGrid(habitBlueprints) { blueprint in
-                    ZStack {
-                        blueprint.color
-                        HStack {
-                            Text(blueprint.name)
-        //                        .onTapGesture {
-        //                            print("Clicking on \(blueprint.name)")
-        //                        }
-                            DeleteButton(blueprints: $habitBlueprints, name: blueprint.name, key: blueprint.key)
-                        }
-                        
-                    }
-                    
+                ForEach(habitBlueprints, id: \.id) { blueprint in
+                    RoundedRectangle(cornerRadius: 15)
+                        .fill(blueprint.color)
+                        .frame(width: CGFloat(blueprint.importance * 50), height: CGFloat(blueprint.importance * 50))
+                        .overlay(
+                            VStack {
+                                Text(blueprint.name)
+                                Text(blueprint.description)
+                            }
+                        )
                 }
-                .frame(minWidth: 200, minHeight: 200)
-                .scaleEffect(scale)
-                .gesture(magnification)
             }
-            
         }
+        
+//        VStack {
+//            HStack {
+//                Button("?") {
+//                    showingPopover = true
+//                }
+//                .background(Color.blue)
+//                .cornerRadius(38.5)
+//                .padding()
+//                .popover(isPresented: $showingPopover) {
+//                    Text("Instructions")
+//                }
+//                Spacer()
+//                Button(action: editMode) {
+//                    Text("Edit")
+//                        .frame(width: 50, height: 25)
+//                }
+//                .background(Color.blue)
+//                .cornerRadius(38.5)
+//                Button(action: addBlueprintItem) {
+//                    Text("+")
+//                        .frame(width: 25, height: 25)
+//                }
+//                .background(Color.blue)
+//                .cornerRadius(38.5)
+//                .padding()
+//            }
+//            .buttonStyle(.borderedProminent)
+//            ScrollView([.horizontal, .vertical]) {
+//                HexGrid(habitBlueprints, spacing: 2.0) { blueprint in
+//                    ZStack {
+//                        blueprint.color
+//                        HStack {
+//                            Text(blueprint.name)
+//        //                        .onTapGesture {
+//        //                            print("Clicking on \(blueprint.name)")
+//        //                        }
+//                            DeleteButton(blueprints: $habitBlueprints, name: blueprint.name, key: blueprint.key)
+//                        }
+//
+//                    }
+//
+//                }
+//                .frame(width: self.width, height: self.height)
+//                .scaleEffect(scale)
+//                .gesture(magnification)
+//            }
+//
+//        }
+//        .background(Color.gray.opacity(0.0))
     }
     
     func addBlueprintItem() {
@@ -84,7 +145,7 @@ struct EditHabitsView: View {
         // add to the database
         let db = Firestore.firestore()
         
-        let document = db.collection("Blueprints").document("New Document")
+        let document = db.collection("Blueprints").document(UUID().uuidString)
         
         document.setData(newData) { error in
             if let error {
@@ -93,6 +154,20 @@ struct EditHabitsView: View {
                 print("Successfully added a blueprint")
             }
         }
+        width += 100
+        height += 100
+        
+        arrangeBlueprints()
+    }
+    
+    func arrangeBlueprints() {
+        for (i, blueprint) in habitBlueprints.enumerated() {
+            blueprint.offsetCoordinate = blueprintPositions[i];
+        }
+    }
+    
+    func editMode() {
+        print("Edit Mode")
     }
     
 }

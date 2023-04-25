@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 
-class Habit: Identifiable {
+struct Habit: Identifiable {
     var id = UUID()
     var name: String
     var description: String
@@ -19,6 +19,7 @@ class Habit: Identifiable {
     var mode: HabitMode
     var totalPoints: Int = 100
     var completionPoints: Int = 0
+    var isComplete: Bool = false
     
     init(name: String, description: String, date: Date, importance: Int, mode: HabitMode, color: Color) {
         self.name = name
@@ -28,6 +29,10 @@ class Habit: Identifiable {
         self.mode = mode
         self.color = color
     }
+    
+//    func setCompletionPoints(_ completionPoints: Int) {
+//        self.completionPoints = completionPoints
+//    }
 }
 
 

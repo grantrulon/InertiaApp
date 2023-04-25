@@ -9,9 +9,12 @@ import SwiftUI
 
 struct HabitCard: View {
     
-    var habit: Habit
+    @Binding var habit: Habit
+//    @Binding var habits: [String:[Habit]]
     @State var partialCompletionProgress: Int
     @State var isToggleOn: Bool = false
+    
+//    @Binding var habits: [String:[Habit]]
     
     var body: some View {
         ZStack {
@@ -25,10 +28,14 @@ struct HabitCard: View {
                 Spacer()
                 switch habit.mode {
                 case .partialCompletion:
-                    TextField("Progress:", value: $partialCompletionProgress, format: .number)
+                    TextField("Progress:", value: $habit.completionPoints, format: .number)
                         .frame(width: 25)
                 case .fullCompletion:
-                    Toggle("Toggle", isOn: $isToggleOn)
+                    Toggle("Toggle", isOn: $habit.isComplete)
+                        .onChange(of: habit.isComplete) { value in
+//                            updateData()
+//                            $habit.completionPoints = 100
+                        }
                 }
             }
             .padding()
@@ -37,9 +44,20 @@ struct HabitCard: View {
         .cornerRadius(8.0)
         .overlay(
             RoundedRectangle(cornerRadius: 8.0)
+                .inset(by: 5)
                 .stroke(habit.color, lineWidth: 5)
         )
 
+    }
+    
+    
+    func updateData() {
+        if habit.mode == .fullCompletion && isToggleOn {
+            habit.completionPoints = habit.totalPoints
+        } else if habit.mode == .fullCompletion && !isToggleOn {
+            habit.completionPoints = 0
+        }
+        print("Updating \(habit.name) to have \(habit.completionPoints)")
     }
 }
 

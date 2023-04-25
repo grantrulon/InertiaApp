@@ -30,6 +30,7 @@
 		0B7F5BA629ED9BFE006C34D7 /* LoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F5BA529ED9BFE006C34D7 /* LoggedInView.swift */; };
 		0B7F5BA929EDA6C9006C34D7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0B7F5BA829EDA6C9006C34D7 /* FirebaseFirestore */; };
 		0B7F5BAB29EDD12A006C34D7 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F5BAA29EDD12A006C34D7 /* DeleteButton.swift */; };
+		0BB0B35F29F6F7EB00962553 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0B35E29F6F7EB00962553 /* CreateAccountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		0B7F5BA329ED99D1006C34D7 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		0B7F5BA529ED9BFE006C34D7 /* LoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInView.swift; sourceTree = "<group>"; };
 		0B7F5BAA29EDD12A006C34D7 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
+		0BB0B35E29F6F7EB00962553 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				0B005B5629ECECE0006B86F4 /* AccountView.swift */,
 				0B7F5BA529ED9BFE006C34D7 /* LoggedInView.swift */,
 				0B7F5BAA29EDD12A006C34D7 /* DeleteButton.swift */,
+				0BB0B35E29F6F7EB00962553 /* CreateAccountView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				0B65B00A29E4D8540040E9DC /* Persistence.swift in Sources */,
 				0B7F5BA029ED9976006C34D7 /* Days.swift in Sources */,
 				0B65B00329E4D84C0040E9DC /* ContentView.swift in Sources */,
+				0BB0B35F29F6F7EB00962553 /* CreateAccountView.swift in Sources */,
 				0B7F5BA229ED9991006C34D7 /* HabitMode.swift in Sources */,
 				0B65B02229E7394A0040E9DC /* HabitCard.swift in Sources */,
 				0B7F5B9D29ED975D006C34D7 /* InertiaViewModel.swift in Sources */,
