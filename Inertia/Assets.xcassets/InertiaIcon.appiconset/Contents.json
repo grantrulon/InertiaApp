@@ -1,60 +1,61 @@
 {
   "images" : [
     {
-      "filename" : "inertia-2.png",
+      "filename" : "inertia-7-modified-16.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
-      "filename" : "inertia.png",
+      "filename" : "inertia-7-modified-32.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
     },
     {
-      "filename" : "inertia 1.png",
+      "filename" : "inertia-7-modified-32 1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
-      "filename" : "inertia-3.png",
+      "filename" : "inertia-7-modified-64.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
     },
     {
-      "filename" : "inertia-4.png",
+      "filename" : "inertia-7-modified-128.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
     },
     {
-      "filename" : "inertia-5 1.png",
+      "filename" : "inertia-7-modified-256.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
     },
     {
-      "filename" : "inertia-5.png",
+      "filename" : "inertia-7-modified-256 1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
     },
     {
-      "filename" : "inertia-6.png",
+      "filename" : "inertia-7-modified-512.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
     },
     {
-      "filename" : "inertia-6 1.png",
+      "filename" : "inertia-7-modified-512 1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
     },
     {
+      "filename" : "inertia-7-modified-1024.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"

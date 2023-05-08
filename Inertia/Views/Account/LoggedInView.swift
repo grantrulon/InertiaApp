@@ -21,9 +21,7 @@ struct LoggedInView: View {
         
     }
     
-    
     func logout() {
-        user.isLoggedIn = false
         self.isLoggedIn = false
     }
 }

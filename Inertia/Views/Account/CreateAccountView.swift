@@ -94,7 +94,6 @@ struct CreateAccountView: View {
                         print(result?.user.uid)
                         user.email = result?.user.email ?? ""
                         user.uid = result?.user.uid ?? ""
-                        user.isLoggedIn = true
                         self.isLoggedIn = true
                         // TODO: fetch data
                     }

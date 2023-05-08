@@ -10,9 +10,9 @@ import SwiftUI
 
 enum SidebarMenuSelections: String, CaseIterable, Identifiable {
     var id: String { rawValue }
-    case MyHabits
-    case TrackTheDay
-    case stats
+    case MyHabits = "Habits"
+    case TrackTheDay = "Track"
+    case stats = "Progress"
 }
 
 struct ContentView: View {
@@ -21,9 +21,7 @@ struct ContentView: View {
     // https://www.youtube.com/watch?v=8buuKon6ZdQ
     @State var visibility: NavigationSplitViewVisibility = .doubleColumn
     @State var selectedMenuItem: SidebarMenuSelections = .MyHabits
-    
     @State var showingProfilePopover = false
-    
     
     var body: some View {
         HStack {
@@ -34,47 +32,40 @@ struct ContentView: View {
             } detail: {
                 switch selectedMenuItem {
                 case .MyHabits:
-                    ZStack {
-                        if true/*inertiaViewModel.isLoggedIn*/ {
-                            EditHabitsView(habitBlueprints: $inertiaViewModel.blueprints)
-                        } else {
-                            EditHabitsView(habitBlueprints: $inertiaViewModel.blueprints)
-                                .blur(radius: 20)
-                            Text("Login To Begin!")
-                                .font(
-                                    .largeTitle
-                                    .weight(.bold)
-                                )
-                                .foregroundColor(.blue)
-//                                .onTapGesture {
-//                                    selectedMenuItem = .account
-//                                }
-                        }
+                    if inertiaViewModel.isLoggedIn {
+                        EditHabitsView(uid: $inertiaViewModel.user.uid, email: $inertiaViewModel.user.email, habitBlueprints: $inertiaViewModel.blueprints, habits: $inertiaViewModel.todayHabits, editMode: $inertiaViewModel.editMode, addMode: $inertiaViewModel.addMode, inertiaViewModel: inertiaViewModel)
+                    } else {
+                        Text("Login To Begin!")
+                            .font(
+                                .largeTitle
+                                .weight(.bold)
+                            )
+                            .foregroundColor(.blue)
                     }
                 case .TrackTheDay:
-                    ZStack {
-                        if inertiaViewModel.isLoggedIn {
-                            VStack {
-                                HabitRecordView(todayHabits: $inertiaViewModel.todayHabits)
-                                ForEach(inertiaViewModel.todayHabits) { habit in
-                                    Text("\(habit.name) : \(habit.completionPoints)")
-                                }
-                            }
-                            
-                            
-                        } else {
-                            HabitRecordView(todayHabits: $inertiaViewModel.todayHabits)
-                                .blur(radius: 20)
-                            Text("Login To Begin!")
-                                .font(
-                                    .largeTitle
-                                    .weight(.bold)
-                                )
-                                .foregroundColor(.blue)
+                    if inertiaViewModel.isLoggedIn {
+                        VStack {
+                            HabitRecordView(todayHabits: $inertiaViewModel.todayHabits, inertiaViewModel: inertiaViewModel)
                         }
+                    } else {
+                        Text("Login To Begin!")
+                            .font(
+                                .largeTitle
+                                .weight(.bold)
+                            )
+                            .foregroundColor(.blue)
                     }
                 case .stats:
-                    Text("Stats View")
+                    if inertiaViewModel.isLoggedIn {
+                        StatsView(habits: $inertiaViewModel.habits, stats: $inertiaViewModel.stats)
+                    } else {
+                        Text("Login To Begin!")
+                            .font(
+                                .largeTitle
+                                .weight(.bold)
+                            )
+                            .foregroundColor(.blue)
+                    }
                 }
             }
             .toolbar {
@@ -82,7 +73,11 @@ struct ContentView: View {
                     Button(action: {
                         showingProfilePopover = true
                         }, label: {
-                            Image(systemName: "person.crop.circle").imageScale(.large)
+                            HStack {
+                                Text(inertiaViewModel.user.email)
+                                Image(systemName: "person.crop.circle").imageScale(.large)
+                            }
+                            
                         }
                     )
                     .popover(isPresented: $showingProfilePopover) {
@@ -91,7 +86,7 @@ struct ContentView: View {
                                 .frame(width: 200, height: 100)
                                 .padding()
                         } else {
-                            AccountView(isLoggedIn: $inertiaViewModel.isLoggedIn, user: $inertiaViewModel.user, blueprints: $inertiaViewModel.blueprints)
+                            AccountView(isLoggedIn: $inertiaViewModel.isLoggedIn, user: $inertiaViewModel.user)
                                 .frame(width: 400, height: 400)
                                 .padding()
                         }

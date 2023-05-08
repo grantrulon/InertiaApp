@@ -11,23 +11,38 @@ import SwiftUI
 
 struct Habit: Identifiable {
     var id = UUID()
+    var key: String
     var name: String
-    var description: String
     var date: Date
     var importance: Int
     var color: Color
-    var mode: HabitMode
-    var totalPoints: Int = 100
-    var completionPoints: Int = 0
     var isComplete: Bool = false
     
-    init(name: String, description: String, date: Date, importance: Int, mode: HabitMode, color: Color) {
+    init(key: String, name: String, date: Date, importance: Int, color: Color, isComplete: Bool) {
+        self.key = key
         self.name = name
-        self.description = description
         self.date = date
         self.importance = importance
-        self.mode = mode
         self.color = color
+        self.isComplete = isComplete
+    }
+    
+    func encodeToStorage() -> [String:Any] {
+        let colorValues = NSColor(self.color).cgColor.components ?? [0, 0, 0, 0]
+        
+        var data: [String:Any] = [
+            "name" : self.name,
+            "date" : self.date.formatted(.dateTime
+                    .day().month().year()
+                ),
+            "isComplete" : self.isComplete,
+            "importance" : self.importance,
+            "red" : Double(colorValues[0]) * 100,
+            "green" : Double(colorValues[1]) * 100,
+            "blue" : Double(colorValues[2]) * 100,
+        ]
+        
+        return data
     }
     
 //    func setCompletionPoints(_ completionPoints: Int) {
@@ -36,5 +51,3 @@ struct Habit: Identifiable {
 }
 
 
-
-// Possibly add an icon down the road

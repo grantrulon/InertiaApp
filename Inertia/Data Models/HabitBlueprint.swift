@@ -7,37 +7,25 @@
 
 import Foundation
 import SwiftUI
-import HexGrid
 
 
-
-
-class HabitBlueprint: Identifiable, OffsetCoordinateProviding {
-    var id: Int { offsetCoordinate.hashValue }
-    var offsetCoordinate: OffsetCoordinate
+class HabitBlueprint: Identifiable {
+    var id: UUID = UUID()
     var key: String
     
     var name: String
     var description: String
-    var recurringDays: Set<Days> = Set<Days>()
-    var specificDates: Set<Date> = Set<Date>()
+    var recurringDays: [Days] = []
     var color: Color = .gray
     var importance: Int
     
-    var mode: HabitMode
-    
-    
-    init(name: String, description: String, color: Color, importance: Int, mode: HabitMode, offsetCoordinate: OffsetCoordinate, key: String) {
+    init(name: String, description: String, days: [Days], color: Color, importance: Int, key: String) {
         self.name = name
         self.description = description
+        self.recurringDays = days
         self.color = color
         self.importance = importance
-        self.mode = mode
-        self.offsetCoordinate = offsetCoordinate
         self.key = key
     }
 }
-
-
-// Maybe a habit blueprint where something translates each of the blueprints into actual day-of habit to fulfil and record for data
 

@@ -9,6 +9,7 @@ import Foundation
 
 
 struct Record {
-    var date = Date.now
-    var percentComplete: Double
+    var date: Date?
+    var numberComplete: Int
+    var numberTotal: Int
 }

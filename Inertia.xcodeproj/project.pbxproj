@@ -22,6 +22,12 @@
 		0B65B01E29E70BB80040E9DC /* HexGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 0B65B01D29E70BB80040E9DC /* HexGrid */; };
 		0B65B02029E738060040E9DC /* HabitRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B65B01F29E738060040E9DC /* HabitRecordView.swift */; };
 		0B65B02229E7394A0040E9DC /* HabitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B65B02129E7394A0040E9DC /* HabitCard.swift */; };
+		0B6852CF29FF19770096879A /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6852CE29FF19770096879A /* StatsView.swift */; };
+		0B6852D52A0560150096879A /* InputFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6852D42A0560150096879A /* InputFieldsView.swift */; };
+		0B6852D72A05608E0096879A /* WeekdaysPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6852D62A05608E0096879A /* WeekdaysPickerView.swift */; };
+		0B6852D92A0758380096879A /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6852D82A0758370096879A /* CustomDatePicker.swift */; };
+		0B6852DB2A081AFE0096879A /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6852DA2A081AFE0096879A /* CircularProgressView.swift */; };
+		0B6852DD2A08234E0096879A /* HabitCompletionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6852DC2A08234E0096879A /* HabitCompletionView.swift */; };
 		0B7F5B9B29ED972A006C34D7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F5B9A29ED972A006C34D7 /* User.swift */; };
 		0B7F5B9D29ED975D006C34D7 /* InertiaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F5B9C29ED975D006C34D7 /* InertiaViewModel.swift */; };
 		0B7F5BA029ED9976006C34D7 /* Days.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F5B9F29ED9976006C34D7 /* Days.swift */; };
@@ -30,6 +36,7 @@
 		0B7F5BA629ED9BFE006C34D7 /* LoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F5BA529ED9BFE006C34D7 /* LoggedInView.swift */; };
 		0B7F5BA929EDA6C9006C34D7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0B7F5BA829EDA6C9006C34D7 /* FirebaseFirestore */; };
 		0B7F5BAB29EDD12A006C34D7 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F5BAA29EDD12A006C34D7 /* DeleteButton.swift */; };
+		0BAD54D429F9A5F7001EBD2E /* NewBlueprintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAD54D329F9A5F7001EBD2E /* NewBlueprintView.swift */; };
 		0BB0B35F29F6F7EB00962553 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0B35E29F6F7EB00962553 /* CreateAccountView.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +56,12 @@
 		0B65B01A29E706210040E9DC /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		0B65B01F29E738060040E9DC /* HabitRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitRecordView.swift; sourceTree = "<group>"; };
 		0B65B02129E7394A0040E9DC /* HabitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCard.swift; sourceTree = "<group>"; };
+		0B6852CE29FF19770096879A /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		0B6852D42A0560150096879A /* InputFieldsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldsView.swift; sourceTree = "<group>"; };
+		0B6852D62A05608E0096879A /* WeekdaysPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysPickerView.swift; sourceTree = "<group>"; };
+		0B6852D82A0758370096879A /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
+		0B6852DA2A081AFE0096879A /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		0B6852DC2A08234E0096879A /* HabitCompletionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCompletionView.swift; sourceTree = "<group>"; };
 		0B7F5B9A29ED972A006C34D7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0B7F5B9C29ED975D006C34D7 /* InertiaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InertiaViewModel.swift; sourceTree = "<group>"; };
 		0B7F5B9F29ED9976006C34D7 /* Days.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Days.swift; sourceTree = "<group>"; };
@@ -56,6 +69,7 @@
 		0B7F5BA329ED99D1006C34D7 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		0B7F5BA529ED9BFE006C34D7 /* LoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInView.swift; sourceTree = "<group>"; };
 		0B7F5BAA29EDD12A006C34D7 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
+		0BAD54D329F9A5F7001EBD2E /* NewBlueprintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBlueprintView.swift; sourceTree = "<group>"; };
 		0BB0B35E29F6F7EB00962553 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,13 +133,10 @@
 			isa = PBXGroup;
 			children = (
 				0B65B00229E4D84C0040E9DC /* ContentView.swift */,
-				0B65B01529E60E7C0040E9DC /* EditHabitsView.swift */,
-				0B65B01F29E738060040E9DC /* HabitRecordView.swift */,
-				0B65B02129E7394A0040E9DC /* HabitCard.swift */,
-				0B005B5629ECECE0006B86F4 /* AccountView.swift */,
-				0B7F5BA529ED9BFE006C34D7 /* LoggedInView.swift */,
-				0B7F5BAA29EDD12A006C34D7 /* DeleteButton.swift */,
-				0BB0B35E29F6F7EB00962553 /* CreateAccountView.swift */,
+				0B6852D32A055F3B0096879A /* Stats */,
+				0B6852D22A055F2F0096879A /* Tracking */,
+				0B6852D12A055F160096879A /* Blueprints */,
+				0B6852D02A055EE60096879A /* Account */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -141,6 +152,48 @@
 				0B7F5BA329ED99D1006C34D7 /* Record.swift */,
 			);
 			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		0B6852D02A055EE60096879A /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				0BB0B35E29F6F7EB00962553 /* CreateAccountView.swift */,
+				0B7F5BA529ED9BFE006C34D7 /* LoggedInView.swift */,
+				0B005B5629ECECE0006B86F4 /* AccountView.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		0B6852D12A055F160096879A /* Blueprints */ = {
+			isa = PBXGroup;
+			children = (
+				0BAD54D329F9A5F7001EBD2E /* NewBlueprintView.swift */,
+				0B7F5BAA29EDD12A006C34D7 /* DeleteButton.swift */,
+				0B65B01529E60E7C0040E9DC /* EditHabitsView.swift */,
+				0B6852D42A0560150096879A /* InputFieldsView.swift */,
+				0B6852D62A05608E0096879A /* WeekdaysPickerView.swift */,
+			);
+			path = Blueprints;
+			sourceTree = "<group>";
+		};
+		0B6852D22A055F2F0096879A /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				0B65B02129E7394A0040E9DC /* HabitCard.swift */,
+				0B65B01F29E738060040E9DC /* HabitRecordView.swift */,
+			);
+			path = Tracking;
+			sourceTree = "<group>";
+		};
+		0B6852D32A055F3B0096879A /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				0B6852CE29FF19770096879A /* StatsView.swift */,
+				0B6852D82A0758370096879A /* CustomDatePicker.swift */,
+				0B6852DA2A081AFE0096879A /* CircularProgressView.swift */,
+				0B6852DC2A08234E0096879A /* HabitCompletionView.swift */,
+			);
+			path = Stats;
 			sourceTree = "<group>";
 		};
 		0B7F5B9E29ED97C4006C34D7 /* View Models */ = {
@@ -243,15 +296,22 @@
 				0B65B01629E60E7C0040E9DC /* EditHabitsView.swift in Sources */,
 				0B7F5BA429ED99D1006C34D7 /* Record.swift in Sources */,
 				0B65B02029E738060040E9DC /* HabitRecordView.swift in Sources */,
+				0B6852CF29FF19770096879A /* StatsView.swift in Sources */,
+				0B6852DD2A08234E0096879A /* HabitCompletionView.swift in Sources */,
 				0B65B00D29E4D8540040E9DC /* Inertia.xcdatamodeld in Sources */,
 				0B005B5729ECECE0006B86F4 /* AccountView.swift in Sources */,
+				0B6852D72A05608E0096879A /* WeekdaysPickerView.swift in Sources */,
+				0BAD54D429F9A5F7001EBD2E /* NewBlueprintView.swift in Sources */,
+				0B6852DB2A081AFE0096879A /* CircularProgressView.swift in Sources */,
 				0B7F5BAB29EDD12A006C34D7 /* DeleteButton.swift in Sources */,
+				0B6852D52A0560150096879A /* InputFieldsView.swift in Sources */,
 				0B65B01B29E706210040E9DC /* Habit.swift in Sources */,
 				0B65B00A29E4D8540040E9DC /* Persistence.swift in Sources */,
 				0B7F5BA029ED9976006C34D7 /* Days.swift in Sources */,
 				0B65B00329E4D84C0040E9DC /* ContentView.swift in Sources */,
 				0BB0B35F29F6F7EB00962553 /* CreateAccountView.swift in Sources */,
 				0B7F5BA229ED9991006C34D7 /* HabitMode.swift in Sources */,
+				0B6852D92A0758380096879A /* CustomDatePicker.swift in Sources */,
 				0B65B02229E7394A0040E9DC /* HabitCard.swift in Sources */,
 				0B7F5B9D29ED975D006C34D7 /* InertiaViewModel.swift in Sources */,
 				0B65B00129E4D84C0040E9DC /* InertiaApp.swift in Sources */,
@@ -378,9 +438,9 @@
 		0B65B01229E4D8540040E9DC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = InertiaIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Inertia/Inertia.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
@@ -392,6 +452,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = "inertia-6.png";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -408,9 +469,9 @@
 		0B65B01329E4D8540040E9DC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = InertiaIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Inertia/Inertia.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
@@ -422,6 +483,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = "inertia-6.png";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

@@ -13,18 +13,18 @@ import FirebaseFirestore
 struct AccountView: View {
     @State var email = ""
     @State var password = ""
+    @State var errorInformation: String = ""
+    @State var tabSelected: Int = 0
+    
     @Binding var isLoggedIn: Bool
     @Binding var user: User
     
-    @State var errorInformation: String = ""
     
-//    @Binding var nextX: Int
-//    @Binding var nextY: Int
     
-    @State var localBlueprints: [HabitBlueprint] = []
-    @Binding var blueprints: [HabitBlueprint]
+//    @State var localBlueprints: [HabitBlueprint] = []
+//    @Binding var blueprints: [HabitBlueprint]
     
-    @State var tabSelected: Int = 0
+    
     
     
     var body: some View {
@@ -137,21 +137,13 @@ struct AccountView: View {
                 print(error?.localizedDescription ?? "")
                 self.errorInformation = error?.localizedDescription ?? ""
             } else {
-                print("success")
-                print(result?.user.email)
-                print(result?.user.uid)
                 user.email = result?.user.email ?? ""
                 user.uid = result?.user.uid ?? ""
-                user.isLoggedIn = true
                 self.isLoggedIn = true
-                fetchData()
             }
         }
     }
     
-    func fetchData() {
-        
-    }
 }
 
 //struct AccountView_Previews: PreviewProvider {
