@@ -10,9 +10,6 @@ import FirebaseFirestore
 
 struct NewBlueprintView: View {
     
-    @Binding var uid: String
-    @Binding var email: String
-    
     @State var name: String = ""
     @State var description: String = ""
     @State var importance: Int = 1
@@ -26,16 +23,14 @@ struct NewBlueprintView: View {
     @State var saturday: Bool = false
     @State var sunday: Bool = false
     
-    @Binding var addMode: Bool
-    @Binding var editMode: Bool
+    @State var errorInformation: String = ""
+    
     @Binding var blueprints: [HabitBlueprint]
     @Binding var habits: [Habit]
     @ObservedObject var inertiaViewModel: InertiaViewModel
     
-    @State var errorInformation: String = ""
-    
     var body: some View {
-        if addMode {
+        if inertiaViewModel.addMode {
             VStack {
                 Text("New Habit")
                     .font(.system(.title, weight: .bold))
@@ -47,8 +42,8 @@ struct NewBlueprintView: View {
                 Button(action: {
                     if checkNewBlueprint() {
                         addBlueprint()
-                        addMode = false
-                        editMode = false
+                        inertiaViewModel.addMode = false
+                        inertiaViewModel.editMode = false
                     }
                 }, label: {
                     Text("Add")
@@ -100,8 +95,8 @@ struct NewBlueprintView: View {
         newData["red"] = Double(colorValues[0]) * 100
         newData["green"] = Double(colorValues[1]) * 100
         newData["blue"] = Double(colorValues[2]) * 100
-        newData["uid"] = self.uid
-        newData["email"] = self.email
+        newData["uid"] = inertiaViewModel.user.uid
+        newData["email"] = inertiaViewModel.user.email
         
         newData["monday"] = self.monday
         newData["tuesday"] = self.tuesday
@@ -187,7 +182,7 @@ struct NewBlueprintView: View {
             newData["name"] = newHabit.name
             newData["importance"] = newHabit.importance
             newData["isComplete"] = newHabit.isComplete
-            newData["uid"] = self.uid
+            newData["uid"] = inertiaViewModel.user.uid
             newData["date"] = dateToString(newHabit.date)
             
             let colorValues = NSColor(newHabit.color).cgColor.components ?? [0, 0, 0, 0]

@@ -11,13 +11,8 @@ import FirebaseFirestore
 
 struct EditHabitsView: View {
     
-    @Binding var uid: String
-    @Binding var email: String
-    
     @Binding var habitBlueprints: [HabitBlueprint]
     @Binding var habits: [Habit]
-    @Binding var editMode: Bool
-    @Binding var addMode: Bool
     @ObservedObject var inertiaViewModel: InertiaViewModel
     
     @State var showingPopover = false
@@ -25,12 +20,11 @@ struct EditHabitsView: View {
     var editGrid = [GridItem(.adaptive(minimum: 250), spacing: 16)]
     
     var body: some View {
-        
         VStack {
             HStack {
                 Spacer()
                 Button(action: {
-                    editMode.toggle()
+                    inertiaViewModel.editMode.toggle()
                 }, label: {
                     Text("Edit")
                         .foregroundColor(.white)
@@ -39,18 +33,15 @@ struct EditHabitsView: View {
                 .frame(width: 70, height: 40)
                 .background(Color.gray)
                 .clipShape(Capsule())
-                .shadow(color: Color.black.opacity(0.3),
-                        radius: 3,
-                        x: 3,
-                        y: 3)
+                .shadow(color: Color.black.opacity(0.3), radius: 3, x: 3, y: 3)
                 .padding()
             }
             
             ScrollView {
                 LazyVGrid(columns: editGrid, spacing: 16) {
-                    if editMode {
+                    if inertiaViewModel.editMode {
                         Button(action: {
-                            addMode = true
+                            inertiaViewModel.addMode = true
                         }, label: {
                             Image(systemName: "plus.app")
                                 .resizable()
@@ -94,13 +85,13 @@ struct EditHabitsView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                         .shadow(color: blueprint.color.opacity(0.3), radius: 20, x: 0, y: 10)
                         .overlay(
-                            DeleteButton(blueprints: $habitBlueprints, habits: $habits, name: blueprint.name, key: blueprint.key, editMode: $editMode, inertiaViewModel: inertiaViewModel)
+                            DeleteButton(name: blueprint.name, key: blueprint.key, inertiaViewModel: inertiaViewModel)
                         )
                     }
                 }
             }
             .padding(16)
-            .overlay(NewBlueprintView(uid: $uid, email: $email, addMode: $addMode, editMode: $editMode, blueprints: $habitBlueprints, habits: $habits, inertiaViewModel: inertiaViewModel))
+            .overlay(NewBlueprintView(blueprints: $habitBlueprints, habits: $habits, inertiaViewModel: inertiaViewModel))
             
         }
         

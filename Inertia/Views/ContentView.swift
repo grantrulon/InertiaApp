@@ -31,9 +31,10 @@ struct ContentView: View {
                 }
             } detail: {
                 switch selectedMenuItem {
+                    
                 case .MyHabits:
                     if inertiaViewModel.isLoggedIn {
-                        EditHabitsView(uid: $inertiaViewModel.user.uid, email: $inertiaViewModel.user.email, habitBlueprints: $inertiaViewModel.blueprints, habits: $inertiaViewModel.todayHabits, editMode: $inertiaViewModel.editMode, addMode: $inertiaViewModel.addMode, inertiaViewModel: inertiaViewModel)
+                        EditHabitsView(habitBlueprints: $inertiaViewModel.blueprints, habits: $inertiaViewModel.todayHabits, inertiaViewModel: inertiaViewModel)
                     } else {
                         Text("Login To Begin!")
                             .font(
@@ -42,6 +43,7 @@ struct ContentView: View {
                             )
                             .foregroundColor(.blue)
                     }
+                    
                 case .TrackTheDay:
                     if inertiaViewModel.isLoggedIn {
                         VStack {
@@ -55,6 +57,7 @@ struct ContentView: View {
                             )
                             .foregroundColor(.blue)
                     }
+                    
                 case .stats:
                     if inertiaViewModel.isLoggedIn {
                         StatsView(habits: $inertiaViewModel.habits, stats: $inertiaViewModel.stats)
@@ -77,7 +80,6 @@ struct ContentView: View {
                                 Text(inertiaViewModel.user.email)
                                 Image(systemName: "person.crop.circle").imageScale(.large)
                             }
-                            
                         }
                     )
                     .popover(isPresented: $showingProfilePopover) {
