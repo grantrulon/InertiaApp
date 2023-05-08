@@ -33,7 +33,7 @@ struct HabitCard: View {
                     Text("")
                 })
                 .onChange(of: habit.isComplete, perform: { value in
-                    updateCompletion()
+                    inertiaViewModel.updateCompletion(habit: habit)
                 })
                 .toggleStyle(CheckboxStyle())
             }
@@ -45,33 +45,8 @@ struct HabitCard: View {
 
     }
     
-    func updateCompletion() {
-        // Update the statistics
-        inertiaViewModel.updateStats()
-        inertiaViewModel.sortHabits()
-        
-        let db = Firestore.firestore()
-        
-        let document = db.collection("Habits").document(self.habit.key)
-        
-        document.setData(habit.encodeToStorage(), merge: true) { error in
-            if let error {
-                print("Error updating the habit data \(error)")
-            } else {
-                print("Successfully updated the \(habit.name) habit to be completed: \(habit.isComplete)")
-            }
-        }
-    }
     
-//
-//    func updateData() {
-//        if habit.mode == .fullCompletion && isToggleOn {
-//            habit.completionPoints = habit.totalPoints
-//        } else if habit.mode == .fullCompletion && !isToggleOn {
-//            habit.completionPoints = 0
-//        }
-//        print("Updating \(habit.name) to have \(habit.completionPoints)")
-//    }
+    
 }
 
 //struct HabitCard_Previews: PreviewProvider {

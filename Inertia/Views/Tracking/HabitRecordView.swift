@@ -31,6 +31,3 @@ struct HabitRecordView: View {
 //    }
 //}
 
-
-// TODO: Future Work
-// - Add functionality for 

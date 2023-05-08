@@ -25,7 +25,6 @@
 		0B6852CF29FF19770096879A /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6852CE29FF19770096879A /* StatsView.swift */; };
 		0B6852D52A0560150096879A /* InputFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6852D42A0560150096879A /* InputFieldsView.swift */; };
 		0B6852D72A05608E0096879A /* WeekdaysPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6852D62A05608E0096879A /* WeekdaysPickerView.swift */; };
-		0B6852D92A0758380096879A /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6852D82A0758370096879A /* CustomDatePicker.swift */; };
 		0B6852DB2A081AFE0096879A /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6852DA2A081AFE0096879A /* CircularProgressView.swift */; };
 		0B6852DD2A08234E0096879A /* HabitCompletionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6852DC2A08234E0096879A /* HabitCompletionView.swift */; };
 		0B6852DF2A097B8E0096879A /* InertiaViewModel_DatabaseOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6852DE2A097B8E0096879A /* InertiaViewModel_DatabaseOperations.swift */; };
@@ -60,7 +59,6 @@
 		0B6852CE29FF19770096879A /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		0B6852D42A0560150096879A /* InputFieldsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldsView.swift; sourceTree = "<group>"; };
 		0B6852D62A05608E0096879A /* WeekdaysPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysPickerView.swift; sourceTree = "<group>"; };
-		0B6852D82A0758370096879A /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		0B6852DA2A081AFE0096879A /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		0B6852DC2A08234E0096879A /* HabitCompletionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCompletionView.swift; sourceTree = "<group>"; };
 		0B6852DE2A097B8E0096879A /* InertiaViewModel_DatabaseOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InertiaViewModel_DatabaseOperations.swift; sourceTree = "<group>"; };
@@ -191,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				0B6852CE29FF19770096879A /* StatsView.swift */,
-				0B6852D82A0758370096879A /* CustomDatePicker.swift */,
 				0B6852DA2A081AFE0096879A /* CircularProgressView.swift */,
 				0B6852DC2A08234E0096879A /* HabitCompletionView.swift */,
 			);
@@ -315,7 +312,6 @@
 				0B65B00329E4D84C0040E9DC /* ContentView.swift in Sources */,
 				0BB0B35F29F6F7EB00962553 /* CreateAccountView.swift in Sources */,
 				0B7F5BA229ED9991006C34D7 /* HabitMode.swift in Sources */,
-				0B6852D92A0758380096879A /* CustomDatePicker.swift in Sources */,
 				0B65B02229E7394A0040E9DC /* HabitCard.swift in Sources */,
 				0B7F5B9D29ED975D006C34D7 /* InertiaViewModel.swift in Sources */,
 				0B65B00129E4D84C0040E9DC /* InertiaApp.swift in Sources */,

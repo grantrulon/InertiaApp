@@ -9,8 +9,6 @@ import SwiftUI
 import FirebaseFirestore
 
 struct DeleteButton: View {
-//    @Binding var blueprints: [HabitBlueprint]
-//    @Binding var habits: [Habit]
     var name: String
     var key: String
     
