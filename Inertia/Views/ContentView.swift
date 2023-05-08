@@ -18,7 +18,7 @@ enum SidebarMenuSelections: String, CaseIterable, Identifiable {
 struct ContentView: View {
     @StateObject var inertiaViewModel = InertiaViewModel()
     
-    // https://www.youtube.com/watch?v=8buuKon6ZdQ
+    // Citation #1 https://www.youtube.com/watch?v=8buuKon6ZdQ
     @State var visibility: NavigationSplitViewVisibility = .doubleColumn
     @State var selectedMenuItem: SidebarMenuSelections = .MyHabits
     @State var showingProfilePopover = false

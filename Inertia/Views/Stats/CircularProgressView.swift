@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-// https://sarunw.com/posts/swiftui-circular-progress-bar/
-
+// Citation #2: https://sarunw.com/posts/swiftui-circular-progress-bar/
 struct CircularProgressView: View {
     var data: Record?
     

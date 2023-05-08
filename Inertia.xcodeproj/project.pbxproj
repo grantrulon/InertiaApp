@@ -107,6 +107,7 @@
 		0B65AFFF29E4D84C0040E9DC /* Inertia */ = {
 			isa = PBXGroup;
 			children = (
+				0B6852E02A09B0520096879A /* Citations */,
 				0B7F5B9E29ED97C4006C34D7 /* View Models */,
 				0B65B01729E65D9C0040E9DC /* Data Models */,
 				0B65B01429E60E3D0040E9DC /* Views */,
@@ -193,6 +194,13 @@
 				0B6852DC2A08234E0096879A /* HabitCompletionView.swift */,
 			);
 			path = Stats;
+			sourceTree = "<group>";
+		};
+		0B6852E02A09B0520096879A /* Citations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Citations;
 			sourceTree = "<group>";
 		};
 		0B7F5B9E29ED97C4006C34D7 /* View Models */ = {

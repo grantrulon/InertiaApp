@@ -56,7 +56,7 @@ struct HabitCard: View {
 //}
 
 
-// https://www.appcoda.com/swiftui-toggle-style/
+// Citation #3: https://www.appcoda.com/swiftui-toggle-style/
 struct CheckboxStyle: ToggleStyle {
  
     func makeBody(configuration: Self.Configuration) -> some View {
