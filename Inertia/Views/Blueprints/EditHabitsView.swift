@@ -104,8 +104,6 @@ struct EditHabitsView: View {
 
 
 
-
-
 //struct EditHabitsView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        EditHabitsView()
