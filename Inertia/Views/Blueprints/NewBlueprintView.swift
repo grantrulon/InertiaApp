@@ -35,7 +35,7 @@ struct NewBlueprintView: View {
                 Text("New Habit")
                     .font(.system(.title, weight: .bold))
                 Text(errorInformation)
-                    .font(.system(size: 12, weight: .light))
+                    .font(.system(size: 12, weight: .medium))
                     .foregroundColor(.red)
                 InputFieldsView(name: $name, description: $description, importance: $importance, color: $color)
                 WeekdaysPickerView(monday: $monday, tuesday: $tuesday, wednesday: $wednesday, thursday: $thursday, friday: $friday, saturday: $saturday, sunday: $sunday)
@@ -57,6 +57,15 @@ struct NewBlueprintView: View {
                 .background(.secondary)
                 .cornerRadius(4)
                 .padding(.top, 15)
+                Button(action: {
+                    inertiaViewModel.addMode = false
+                    name = ""
+                    description = ""
+                }, label: {
+                    Text("Cancel")
+                        .font(.system(size: 11))
+                })
+                .buttonStyle(.plain)
             }
                 .padding()
                 .frame(width: 350, height: 400)
